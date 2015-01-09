@@ -34,6 +34,14 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :test do
+  gem 'shoulda' # clean RSpec asserts
+  gem 'database_cleaner'
+end
+
+
+gem 'factory_girl_rails', '~> 4.0' # factory generation, group: [:development, :test]
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
