@@ -21,7 +21,6 @@ require 'rails_helper'
 RSpec.describe API::V1::ProductCategoriesController, :type => :controller do
   let(:url) { "http://api.domain.com" }
 
-
   # This should return the minimal set of attributes required to create a valid
   # ProductCategory. As you add validations to ProductCategory, be sure to
   # adjust the attributes here as well.

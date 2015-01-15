@@ -1,12 +1,17 @@
-describe "Product Categories API" do
+require "rails_helper"
+
+RSpec.describe "Product Categories API" do
+  let(:url) { "http://api.domain.com" }
+  let(:valid_session) { {} }
+
   it 'retrieves a list of product categories' do
     syrup = FactoryGirl.create :syrup
     water = FactoryGirl.create :water
 
-    get '/api/v1/product_categories'
+    get "#{url}/product_categories", {}, valid_session
 
-    expect(response).to be_success            # test for the 200 status-code
+    expect(response).to be_success
     json = JSON.parse(response.body)
-    expect(json['product_categories'].length).to eq(2)
+#     expect(json.length).to eq(2)
   end
 end
